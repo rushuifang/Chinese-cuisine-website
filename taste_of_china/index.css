@@ -157,6 +157,9 @@ header {
         font-size: 3vw;
         width: 100%;
     }
+    .footersub3 {
+        display: none;
+    }
 }
 @media (min-width: 700px) and (max-width: 1200px) {
     .webtitle {
@@ -191,6 +194,9 @@ header {
     .footersub {
         width: 50%;
         font-size: 2vw;
+    }
+    .footersub3 {
+        display: none;
     }
 }
 @media (min-width: 1200px) {
@@ -392,6 +398,10 @@ li:last-child a {
 }
 .hotpot {
     text-align: center;
+}
+.hotpot img {
+    background-image: url("pictures/hotpot.jpeg");
+    background-size: cover;
 }
 .hotpot p {
     display: inline-block;
