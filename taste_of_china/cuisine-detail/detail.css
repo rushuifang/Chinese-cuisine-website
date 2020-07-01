@@ -1,0 +1,139 @@
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100% !important;
+}
+.container {
+    text-align: center;
+    margin: 0 auto 5vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.image-container {
+    text-align: center;
+}
+.image-container > h2,
+h3 {
+    color: purple;
+    font-family: "Piedra", cursive;
+}
+.image-style {
+    z-index: 100;
+    border: 1vh solid rgb(153, 28, 143);
+    border-style: ridge;
+}
+.image-style:hover {
+    transform: scale(1.05);
+}
+.text-container {
+    text-align: justify;
+    padding: 0 4vw 0 0;
+    overflow: scroll;
+}
+.text-container > h2 {
+    color: purple;
+}
+.text-container > p {
+    text-align: justify;
+    overflow: scroll;
+}
+.end-img {
+    width: 100%;
+}
+.detail-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    background-color: #18bdcc;
+}
+@media (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        transform: translateY(10%);
+    }
+    .image-container {
+        width: 80%;
+        padding: 0.5vh 0;
+    }
+    .image-style {
+        height: 30vh;
+        width: 70vw;
+    }
+    .text-container {
+        width: 80%;
+        height: 40vh;
+        margin: 0 auto 2vh;
+    }
+    .text-container > h2 {
+        font-size: 3.5vw;
+    }
+    .text-container > p {
+        font-size: 2.5vw;
+    }
+    .end-img {
+        margin: 2vh auto;
+    }
+}
+@media (min-width: 700px) and (max-width: 1200px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        transform: translateY(15%);
+    }
+    .image-container {
+        width: 50%;
+        padding: 1vh 0;
+    }
+    .image-style {
+        height: 30vh;
+        width: 40vw;
+    }
+    .text-container {
+        width: 50%;
+        height: 50vh;
+        margin: 0 auto 2vh;
+    }
+    .text-container > h2 {
+        font-size: 3vw;
+    }
+    .text-container > p {
+        font-size: 2vw;
+    }
+    .end-img {
+        margin: 2vh auto 0;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        transform: translateY(20%);
+    }
+    .image-container {
+        width: 50%;
+        padding: 2vh 0;
+    }
+    .image-style {
+        height: 50vh;
+        width: 30vw;
+    }
+    .text-container {
+        width: 50%;
+        height: 75vh;
+    }
+    .text-container > h2 {
+        font-size: 1.8vw;
+    }
+    .text-container > p {
+        font-size: 1.5vw;
+    }
+    .end-img {
+        margin: 10vh auto 0;
+    }
+}

@@ -1,0 +1,452 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+}
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: #18bdcc;
+    padding: 1vh 1vw;
+    color: #f0ead6;
+}
+.head-bar {
+    padding: 1vh 1vw;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.head-bar div {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+.head-bar div div {
+    font-size: 1vw;
+}
+.webtitle {
+    display: inline-block;
+    font-weight: 900;
+    font-family: "Piedra", cursive;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: none;
+    border: none;
+    color: white;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-image: url("pictures/whitebackground.jpg");
+    background-size: cover;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown1 {
+    min-width: 50vw;
+    transform: translateY(5%);
+}
+.dropdown2 {
+    min-width: 50vw;
+    transform: translateY(8%);
+}
+.dropdown3 {
+    width: 20vw !important;
+    transform: translateY(20%);
+    background-color: black;
+}
+.dropdown-menu {
+    width: 33.3%;
+    float: left;
+}
+.dropdown-menu3 {
+    width: 100% !important;
+    float: left;
+}
+.dropdown-menu a {
+    color: #04585f;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+.dropdown:hover .dropbtn {
+    background-color: grey;
+    cursor: pointer;
+}
+.content {
+    margin: 10vh auto 0;
+    display: none;
+}
+.page-active {
+    display: block;
+}
+.cuisine-row {
+    background-image: url("pictures/red.jpg");
+    background-size: cover;
+    margin: 2vh auto;
+}
+.cuisine-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.cuisine {
+    margin: 0 auto;
+    overflow: hidden;
+    float: left;
+    border: 0.1vw solid grey;
+    text-align: center;
+}
+.cuisine > p:last-child {
+    transform: translateY(-50%);
+}
+@media (max-width: 700px) {
+    .webtitle {
+        font-size: 4.2vw;
+    }
+    .dropbtn {
+        font-size: 3vw !important;
+    }
+    .dropdown-menu a {
+        font-size: 2vw !important;
+        padding: 5px 6px;
+    }
+    .head-bar div img {
+        height: 4vw;
+    }
+    .content {
+        width: 95%;
+    }
+    .cuisine-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .cuisine {
+        width: 100%;
+        height: 45vh;
+    }
+    .cuisine > p {
+        font-size: 3vw;
+    }
+    .cuisine-link {
+        font-size: 3vw;
+    }
+    .hotpot > img {
+        width: 90%;
+    }
+    .footersub {
+        font-size: 3vw;
+        width: 100%;
+    }
+}
+@media (min-width: 700px) and (max-width: 1200px) {
+    .webtitle {
+        font-size: 3.2vw;
+    }
+    .dropbtn {
+        font-size: 2.2vw !important;
+    }
+    .dropdown-menu a {
+        font-size: 2vw !important;
+        padding: 10px 12px;
+    }
+    .head-bar div img {
+        height: 3.2vw;
+    }
+    .content {
+        width: 90%;
+    }
+    .cuisine {
+        width: 33%;
+        height: 35vh;
+    }
+    .cuisine > p {
+        font-size: 1.5vw;
+    }
+    .cuisine-link {
+        font-size: 2vw;
+    }
+    .hotpot > img {
+        width: 80%;
+    }
+    .footersub {
+        width: 50%;
+        font-size: 2vw;
+    }
+}
+@media (min-width: 1200px) {
+    .webtitle {
+        font-size: 2vw;
+    }
+    .dropbtn {
+        font-size: 1.3vw !important;
+    }
+    .dropdown-menu a {
+        font-size: 1.1vw !important;
+        padding: 15px 16px;
+    }
+    .head-bar div img {
+        height: 2.5vw;
+    }
+    .content {
+        width: 70%;
+    }
+    .cuisine {
+        width: 33.3%;
+        height: 35vh;
+    }
+    .cuisine > p {
+        font-size: 1vw;
+    }
+    .cuisine-link {
+        font-size: 1.5vw;
+    }
+    .hotpot > img {
+        width: 50%;
+    }
+    .footersub {
+        width: 33.3%;
+    }
+}
+.cuisine-parent {
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
+}
+.cuisine-child {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.cuisine1 {
+    background-image: url("pictures/yansuji.jpg");
+}
+.cuisine2 {
+    background-image: url("pictures/shuizhuyu.jpeg");
+}
+.cuisine3 {
+    background-image: url("pictures/fotiaoqiang.jpg");
+}
+.cuisine4 {
+    background-image: url("pictures/pekingduck.jpg");
+}
+.cuisine5 {
+    background-image: url("pictures/shengjian.jpeg");
+}
+.cuisine6 {
+    background-image: url("pictures/stinkytofu.jpg");
+}
+.cuisine7 {
+    background-image: url("pictures/xiarenshengmian.jpg");
+}
+.cuisine8 {
+    background-image: url("pictures/yuebing.jpeg");
+}
+.cuisine9 {
+    background-image: url("pictures/zhajiangmian.jpg");
+}
+.cuisine10 {
+    background-image: url("pictures/tangyoubaba.jpg");
+}
+.cuisine11 {
+    background-image: url("pictures/culiutudousi.jpg");
+}
+.cuisine12 {
+    background-image: url("pictures/duojiaoyutou.jpg");
+}
+.cuisine13 {
+    background-image: url("pictures/tangcupaigu.jpg");
+}
+.cuisine14 {
+    background-image: url("pictures/maoxuewang.jpeg");
+}
+.cuisine15 {
+    background-image: url("pictures/gongbaojiding.jpg");
+}
+.cuisine16 {
+    background-image: url("pictures/mapodoufu.jpg");
+}
+.cuisine17 {
+    background-image: url("pictures/dongporou.jpg");
+}
+.cuisine18 {
+    background-image: url("pictures/luobogao.jpg");
+}
+.cuisine19 {
+    background-image: url("pictures/zongzi.png");
+}
+.cuisine20 {
+    background-image: url("pictures/babaofan.jpg");
+}
+.cuisine21 {
+    background-image: url("pictures/doufuniang.jpg");
+}
+.cuisine22 {
+    background-image: url("pictures/kongxincai.jpg");
+}
+.cuisine23 {
+    background-image: url("pictures/ziranpaigu.jpg");
+}
+.cuisine24 {
+    background-image: url("pictures/huiguorou.jpg");
+}
+.cuisine-parent:hover .cuisine-child,
+.cuisine-parent:focus .cuisine-child {
+    transform: scale(1.2);
+}
+.cuisine-child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 73, 94, 0.75);
+}
+.cuisine-parent:hover .cuisine-child:before,
+.cuisine-parent:focus .cuisine-child:before {
+    display: block;
+}
+.cuisine-link {
+    display: none;
+    color: white;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 10%;
+    cursor: pointer;
+}
+.cuisine-parent:hover .cuisine-link,
+.cuisine-parent:focus .cuisine-link {
+    display: block;
+}
+.cuisine > p {
+    font-weight: bold;
+    color: #e1e9f7;
+    font-family: monospace;
+}
+.pagination {
+    width: 30%;
+    margin: 0 auto;
+    padding: 0.5vw;
+    text-align: center;
+}
+.pagination > li {
+    display: inline-block;
+    list-style: none;
+}
+.pagination li a {
+    display: block;
+    width: 2vw;
+    height: 2vw;
+    font-size: 2vw;
+    line-height: 2vw;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #252525;
+    border-radius: 0.2vw;
+    margin: 0.2vw;
+    box-shadow: inset 0 0.5vw 1vw rgba(0, 0, 0, 0.1),
+        0 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+.pagination li a:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #ff4242;
+}
+li:first-child a {
+    border-radius: 2vw 0 0 2vw;
+}
+li:last-child a {
+    border-radius: 0 2vw 2vw 0;
+}
+.pagination-active {
+    background-color: grey !important;
+}
+.hotpot {
+    text-align: center;
+}
+.hotpot p {
+    display: inline-block;
+    width: 70vw;
+}
+footer {
+    padding: 0 8vw;
+    margin: 2vh auto 0;
+    text-align: center;
+    background-color: #18bdcc;
+    overflow: auto;
+}
+.footersub {
+    float: left;
+    text-align: center;
+}
+.footersub3 p span {
+    color: whitesmoke;
+    background: grey;
+    border-radius: 3px 0 0 3px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    transition: color 0.2s;
+}
+
+.footersub3 p span:before {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: "";
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
+}
+
+.footersub3 p span:after {
+    border-bottom: 13px solid #18bdcc;
+    border-left: 10px solid grey;
+    border-top: 13px solid #18bdcc;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footersub3 p span:hover {
+    background-color: crimson;
+    color: white;
+}
+.footersub3 p span:hover:after {
+    border-left-color: crimson;
+}
